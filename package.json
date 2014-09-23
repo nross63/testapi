@@ -1,0 +1,33 @@
+{
+    "name": "mockpickpay",
+    "description": "Mocked dulpicated Allied RESTful API",
+    "preferGlobal": false,
+    "version": "0.0.1",
+    "author": "Nate Ross <nross63@gmail.com>",
+    "keywords": [
+        "node",
+        "restify",
+        "REST",
+        "gulp"        
+    ],
+    "homepage": "https://bitbucket.org/nross63/mockpicpay",
+    "repository": {
+        "type": "git",
+        "url": "https://bitbucket.org/nross63/mockpicpay"
+    },
+    "bugs": {
+        "url": "https://bitbucket.org/nross63/mockpicpay/issues?status=new&status=open"
+    },
+    "license": {
+        "type": "MIT",
+        "url": "https://bitbucket.org/nross63/mockpicpay/src/97c99bdf0147b571d4a7ede9404bed3dc6a195b8/LICENSE"
+    },
+    "dependencies": {
+        "gulp": "*",
+        "gulp-watch": "*",
+        "gulp-jshint": "*",
+        "gulp-concat": "*",
+        "gulp-uglify": "*",
+        "restify": "*"
+    }
+}
