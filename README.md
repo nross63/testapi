@@ -58,7 +58,6 @@ Finish README doc
 ####Rosemarie McClamrock
 [mcclr01@students.ipfw.edu][rose]
 
-
 [restify]: http://mcavage.me/node-restify/ "API Guide | restify"
 [chris]: mailto:cwaddell.guru@gmail.com "Email Chris"
 [jacob]: mailto:jreusser@logikos.com "Email Jacob"
