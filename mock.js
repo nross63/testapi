@@ -1,8 +1,9 @@
-//Load the restify and mongojs modules using the require function and assign them to variables.
+//Load restify using the require function and assign the module to a variable.
 var restify = require('restify');
 
 //restify services
 var picture = require("./services/picture");
+
 //TODO import new services here
 
 //Server config 
@@ -27,6 +28,7 @@ server.use(restify.bodyParser());
 server.use(restify.CORS());
 
 //TODO: debug 405 & 500 errors.
+
 //Configure picture routes & handlers 
 picture.initialize(_name,_ip,_port); 
 var picPATH = '/picture'

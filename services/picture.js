@@ -1,6 +1,11 @@
 var restify = require('restify');
 var mongojs = require("mongojs");
 
+/****************************************************************************
+	NOTE: Checkout branch 'mockPicPay/picture' before working in this file!
+					$ git checkout picture
+*****************************************************************************/
+
 //server config
 var _name = "";
 var _ip = "";
