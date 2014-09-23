@@ -42,16 +42,26 @@ Finish README doc
 			server.del({path : myPATH +'/:id' , version: '0.0.1'} ,myRoute.remove);
 
 ##Contributors 
--[Christopher Waddell][chris]
--[Jacob Reusser][jacob]
--[Nate Ross][nate]
--[Patrick Weisz][patrick]
--[Rosemarie McClamrock][rose]
+ 
+###Christopher Waddell
+[cwaddell.guru@gmail.com][chris] 
+
+###Jacob Reusser
+[jreusser@logikos.com][jacob]
+
+###Nate Ross
+[nate.ross@alliedpayment.com][nate]
+
+###Patrick Weisz
+[patrick.weisz@alliedpayment.com][patrick]
+
+###Rosemarie McClamrock
+[mcclr01@students.ipfw.edu][rose]
 
 
 [restify]: http://mcavage.me/node-restify/ "API Guide | restify"
 [chris]: mailto:cwaddell.guru@gmail.com "Email Chris"
 [jacob]: mailto:jreusser@logikos.com "Email Jacob"
-[nate]: mailto:cwaddell.guru@gmail.com "Email Nate"
-[patrick]: mailto:cwaddell.guru@gmail.com "Email Patrick"
-[rose]: mailto:cwaddell.guru@gmail.com "Email Rosemarie"
+[nate]: mailto:nate.ross@alliedpayment.com "Email Nate"
+[patrick]: mailto:patrick.weisz@alliedpayment.com "Email Patrick"
+[rose]: mailto:mcclr01@students.ipfw.edu"Email Rosemarie"
