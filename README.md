@@ -21,9 +21,9 @@
 			Note: Use git add remote origin to configure the remote URL for push.
 
 ###Best Practices
-**DO NOT WORK DIRECTLY IN MASTER**
-**Commit messages should be present tense.**
-	Example: git commit -m 'Update readme with git tips.'
+- **DO NOT WORK DIRECTLY IN MASTER**
+- Commit messages should be **present** tense.
+- Example: git commit -m 'Update README with git tips.'
 ##TODO
 Finish README doc
 

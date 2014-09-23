@@ -3,12 +3,18 @@
     "description": "Mocked dulpicated Allied RESTful API",
     "preferGlobal": false,
     "version": "0.0.1",
-    "author": "Nate Ross <nross63@gmail.com>",
+    "authors": [
+        "Christopher Waddell     <cwaddell.guru@gmail.com>",
+        "Jacob Reusser           <jreusser@logikos.com>",
+        "Nate Ross               <nate.ross@alliedpayment.com>",
+        "Patrick Weisz           <patrick.weisz@alliedpayment.com>",
+        "Rosemarie McClamrock    <mcclr01@students.ipfw.edu>"
+    ],
     "keywords": [
         "node",
         "restify",
         "REST",
-        "gulp"        
+        "gulp"
     ],
     "homepage": "https://bitbucket.org/nross63/mockpicpay",
     "repository": {

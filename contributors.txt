@@ -1,5 +1,5 @@
-Christopher Waddell
-Jacob Reusser
-Nate Ross
-Patrick Weisz
-Rosemarie McClamrock
+Christopher Waddell 	<cwaddell.guru@gmail.com>
+Jacob Reusser 			<jreusser@logikos.com>
+Nate Ross 				<nate.ross@alliedpayment.com>
+Patrick Weisz 			<patrick.weisz@alliedpayment.com>
+Rosemarie McClamrock 	<mcclr01@students.ipfw.edu>
