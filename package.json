@@ -34,6 +34,7 @@
         "gulp-jshint": "*",
         "gulp-concat": "*",
         "gulp-uglify": "*",
+        "mongojs": "*",
         "restify": "*"
     }
 }

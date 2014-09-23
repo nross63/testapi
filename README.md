@@ -27,6 +27,18 @@
 ##TODO
 Finish README doc
 
+##RESTful JSON Server 
+	-restify is a node.js module built specifically to enable you to build correct REST web services. It intentionally borrows heavily from express as that is more or less the de facto API for writing web applications on top of node.js.
+	-http://mcavage.me/node-restify/
+###Service Template
+	-Insert code similar to the following into index.js:
+		var myRoute = require('./services/myRoute');
+		//Configure myRoute routes & handlers  
+		var myPATH = '/myRoute';
+		server.get({path : myPATH , version : '0.0.1'} , myRoute.findAll);
+		server.get({path : myPATH +'/:id' , version : '0.0.1'} , myRoute.find);
+		server.post({path : myPATH , version: '0.0.1'} ,myRoute.save);
+		server.del({path : myPATH +'/:id' , version: '0.0.1'} ,myRoute.remove);
 ##Contributors 
 	- Christopher Waddell
 	- Jacob Reusser
