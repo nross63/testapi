@@ -42,15 +42,15 @@ Finish README doc
 			server.del({path : myPATH +'/:id' , version: '0.0.1'} ,myRoute.remove);
 
 ##Contributors 
-	- Christopher Waddell
+Christopher Waddell
 [contact][chris]
-	- Jacob Reusser
+Jacob Reusser
 [contact][jacob]
-	- Nate Ross
+Nate Ross
 [contact][nate]
-	- Patrick Weisz
+Patrick Weisz
 [contact][patrick]
-	- Rosemarie McClamrock
+Rosemarie McClamrock
 [contact][rose]
 
 
