@@ -7,15 +7,15 @@
 -Implement tests for services
 -Implement REST API services
 
+Finish README doc
+##Requirements
+[node.js][node]
 
 ##Installation
-####Requirements
-######node.js
-[download][node]
 			$ cd ~/desired/path/
 			$ git clone https://nross63@bitbucket.org/nross63/mockpicpay.git
 			$ npm install
-####Usage
+##Usage
 #####Navigate to your project directory
 		$ cd ~/.../mockpicpay/
 #####Start restify server
