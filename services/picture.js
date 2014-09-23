@@ -1,19 +1,32 @@
 var restify = require('restify');
 var mongojs = require("mongojs");
 
-var appName = "";
+//server config
+var _name = "";
+var _ip = "";
+var _port ="";
 
 //MongoDB config
-var connection_string = ip_addr + ":"+port+"/"+appName;
-var db = mongojs(connection_string, [appName]);
+var connection_string = _ip + ":"+_port+"/"+_name;
+var db = mongojs(connection_string, [_name]);
 var pics = db.collection("pictures");
-
-//accept app name as parameter or default to "mock"
-function initialize(name){
+ 
+//@param name => type:String =  app name ? "mock"
+//@param ip => type:String =  server ip address ?  "localhost"
+//@param port =>  type:String =  port ? "8080"
+function initialize(name, ip, port){
 	if(name !== undefined && name !== null){
-		appName = (name.length > 0) ? name : "mock";	
+		_name = (name.length > 0) ? name : "mock";	
+		console.log(_name);
 	}
-	
+	if(ip !== undefined && ip !== null){
+		_ip = (ip.length > 0) ? ip : "localhost";	
+		console.log(_ip);
+	}
+	if(port !== undefined && port !== null){
+		_port = (port.length > 0) ? port : "8080";	
+		console.log(_port);
+	}
 };
 
 function findAll(req, res , next){

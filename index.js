@@ -5,15 +5,16 @@ var restify = require('restify');
 var picture = require("./services/picture");
 
 //Server config 
-var ip_addr = '127.0.0.1';
-var port    =  '8080';
-var appName = "mock"
+var _ip = '127.0.0.1';
+var _port    =  '8080';
+var _name = "mock"
+
 
 
 
 
 //Create a new server using restify API
-var server = restify.createServer({name:appName});
+var server = restify.createServer({name:_name});
 
 //Plugin is used to parse the HTTP query string (i.e., /picture?id=1). 
 //The parsed content will always be available in req.query.
@@ -25,7 +26,8 @@ server.use(restify.bodyParser());
 //Configures CORS support in the application
 server.use(restify.CORS());
 
-//Configure picture routes & handlers  
+//Configure picture routes & handlers 
+picture.initialize(_name,_ip,_port); 
 var picPATH = '/picture'
 server.get({path : picPATH , version : '0.0.1'} , picture.findAll);
 server.get({path : picPATH +'/:id' , version : '0.0.1'} , picture.find);
