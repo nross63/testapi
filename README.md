@@ -42,16 +42,11 @@ Finish README doc
 			server.del({path : myPATH +'/:id' , version: '0.0.1'} ,myRoute.remove);
 
 ##Contributors 
-Christopher Waddell
-[contact][chris]
-Jacob Reusser
-[contact][jacob]
-Nate Ross
-[contact][nate]
-Patrick Weisz
-[contact][patrick]
-Rosemarie McClamrock
-[contact][rose]
+-[Christopher Waddell][chris]
+-[Jacob Reusser][jacob]
+-[Nate Ross][nate]
+-[Patrick Weisz][patrick]
+-[Rosemarie McClamrock][rose]
 
 
 [restify]: http://mcavage.me/node-restify/ "API Guide | restify"
