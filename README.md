@@ -1,5 +1,38 @@
 #mockPicPay 
 	Mock and test picturePay API
+##TODO
+Finish README doc
+
+##Installation
+####Requirements
+######node.js
+[download][node]
+			$ cd ~/desired/path/
+			$ git clone https://nross63@bitbucket.org/nross63/mockpicpay.git
+			$ npm install
+####Usage
+#####Navigate to your project directory
+		$ cd ~/.../mockpicpay/
+#####Start restify server
+		$ node mock.js
+
+######About restify
+	-restify is a node.js module built specifically to enable you to build correct REST web services. 
+[http://mcavage.me/node-restify/][restify]
+
+##How To Contribute
+###Add RESTful endpoints
+	-Add service endpoints by following the template below.
+####Service Template
+		-Insert code similar to the following into mock.js:
+			
+			var myRoute = require('./services/myRoute');
+			//Configure myRoute routes & handlers  
+			var myPATH = '/myRoute';
+			server.get({path : myPATH , version : '0.0.1'} , myRoute.findAll);
+			server.get({path : myPATH +'/:id' , version : '0.0.1'} , myRoute.find);
+			server.post({path : myPATH , version: '0.0.1'} ,myRoute.save);
+			server.del({path : myPATH +'/:id' , version: '0.0.1'} ,myRoute.remove);
 
 ##Basic GIT tips
 	- List all changes staged & not staged
@@ -24,22 +57,6 @@
 - **DO NOT WORK DIRECTLY IN MASTER**
 - Commit messages should be **present** tense.
 - Example: git commit -m 'Update README with git tips.'
-##TODO
-Finish README doc
-
-##RESTful JSON Server 
-	-restify is a node.js module built specifically to enable you to build correct REST web services. 
-[http://mcavage.me/node-restify/][restify]
-###Service Template
-	-Insert code similar to the following into index.js:
-			
-			var myRoute = require('./services/myRoute');
-			//Configure myRoute routes & handlers  
-			var myPATH = '/myRoute';
-			server.get({path : myPATH , version : '0.0.1'} , myRoute.findAll);
-			server.get({path : myPATH +'/:id' , version : '0.0.1'} , myRoute.find);
-			server.post({path : myPATH , version: '0.0.1'} ,myRoute.save);
-			server.del({path : myPATH +'/:id' , version: '0.0.1'} ,myRoute.remove);
 
 ##Contributors 
  
@@ -58,6 +75,7 @@ Finish README doc
 ####Rosemarie McClamrock
 [mcclr01@students.ipfw.edu][rose]
 
+[node]: http://nodejs.org/ "Download node.js"
 [restify]: http://mcavage.me/node-restify/ "API Guide | restify"
 [chris]: mailto:cwaddell.guru@gmail.com "Email Chris"
 [jacob]: mailto:jreusser@logikos.com "Email Jacob"
