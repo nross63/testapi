@@ -32,7 +32,7 @@ server.get({path : picPATH +'/:id' , version : '0.0.1'} , picture.find);
 server.post({path : picPATH , version: '0.0.1'} ,picture.save);
 server.del({path : picPATH +'/:id' , version: '0.0.1'} ,picture.remove);
 
-
+//TODO add more service routes & handlers
 
 
 
