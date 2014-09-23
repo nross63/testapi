@@ -49,4 +49,4 @@ Finish README doc
 	- Rosemarie McClamrock
 
 
-	[restify]: http://mcavage.me/node-restify/ "API Guide | restify"
+[restify]: http://mcavage.me/node-restify/ "API Guide | restify"
