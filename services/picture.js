@@ -13,7 +13,7 @@ var pics = db.collection("pictures");
  
 //@param name => type:String =  app name ? "mock"
 //@param ip => type:String =  server ip address ?  "localhost"
-//@param port =>  type:String =  port ? "8080"
+//@param port =>  type:String =  server port ? "8080"
 function initialize(name, ip, port){
 	if(name !== undefined && name !== null){
 		_name = (name.length > 0) ? name : "mock";	
@@ -28,7 +28,7 @@ function initialize(name, ip, port){
 		console.log(_port);
 	}
 };
-
+//TODO: FINISH DOCUMENTING CODE
 function findAll(req, res , next){
     res.setHeader('Access-Control-Allow-Origin','*');
     pics.find().limit(20).sort({postedOn : -1} , function(err , success){
@@ -43,7 +43,7 @@ function findAll(req, res , next){
  
     });
 };
- 
+ //TODO: FINISH DOCUMENTING CODE
 function find(req, res , next){
     res.setHeader('Access-Control-Allow-Origin','*');
     pics.findOne({_id:mongojs.ObjectId(req.params.jobId)} , function(err , success){
@@ -56,7 +56,7 @@ function find(req, res , next){
         return next(err);
     })
 };
- 
+ //TODO: FINISH DOCUMENTING CODE
 function save(req , res , next){
     var job = {};
     job.title = req.params.title;
@@ -77,7 +77,7 @@ function save(req , res , next){
         }
     });
 };
- 
+ //TODO: FINISH DOCUMENTING CODE
 function remove(req , res , next){
     res.setHeader('Access-Control-Allow-Origin','*');
     pics.remove({_id:mongojs.ObjectId(req.params.jobId)} , function(err , success){

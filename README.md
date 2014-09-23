@@ -1,7 +1,12 @@
 #mockPicPay 
 	Mock and test picturePay API
 ##TODO
-Finish README doc
+-Finish README doc
+	- Add testing info 
+	- Edit & Revise
+-Implement tests for services
+-Implement REST API services
+
 
 ##Installation
 ####Requirements

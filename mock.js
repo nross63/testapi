@@ -3,15 +3,15 @@ var restify = require('restify');
 
 //restify services
 var picture = require("./services/picture");
+//TODO import new services here
 
 //Server config 
 var _ip = '127.0.0.1';
 var _port    =  '8080';
 var _name = "mock"
 
-
-
-
+//API Version
+var _version = "0.0.2";
 
 //Create a new server using restify API
 var server = restify.createServer({name:_name});
@@ -26,13 +26,14 @@ server.use(restify.bodyParser());
 //Configures CORS support in the application
 server.use(restify.CORS());
 
+//TODO: debug 405 & 500 errors.
 //Configure picture routes & handlers 
 picture.initialize(_name,_ip,_port); 
 var picPATH = '/picture'
-server.get({path : picPATH , version : '0.0.1'} , picture.findAll);
-server.get({path : picPATH +'/:id' , version : '0.0.1'} , picture.find);
-server.post({path : picPATH , version: '0.0.1'} ,picture.save);
-server.del({path : picPATH +'/:id' , version: '0.0.1'} ,picture.remove);
+server.get({path : picPATH , version : _version} , picture.findAll);
+server.get({path : picPATH +'/:id' , version : _version} , picture.find);
+server.post({path : picPATH , version: _version} ,picture.save);
+server.del({path : picPATH +'/:id' , version: _version} ,picture.remove);
 
 //TODO add more service routes & handlers
 
