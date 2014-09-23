@@ -29,7 +29,7 @@ Finish README doc
 
 ##RESTful JSON Server 
 	-restify is a node.js module built specifically to enable you to build correct REST web services. 
-	-http://mcavage.me/node-restify/
+	-[http://mcavage.me/node-restify/][restify]
 ###Service Template
 	-Insert code similar to the following into index.js:
 			
@@ -47,3 +47,6 @@ Finish README doc
 	- Nate Ross
 	- Patrick Weisz
 	- Rosemarie McClamrock
+
+
+	[restify]: http://mcavage.me/node-restify/ "API Guide | restify"
