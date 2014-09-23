@@ -43,10 +43,20 @@ Finish README doc
 
 ##Contributors 
 	- Christopher Waddell
+[contact][chris]
 	- Jacob Reusser
+[contact][jacob]
 	- Nate Ross
+[contact][nate]
 	- Patrick Weisz
+[contact][patrick]
 	- Rosemarie McClamrock
+[contact][rose]
 
 
 [restify]: http://mcavage.me/node-restify/ "API Guide | restify"
+[chris]: mailto:cwaddell.guru@gmail.com "Email Chris"
+[jacob]: mailto:jreusser@logikos.com "Email Jacob"
+[nate]: mailto:cwaddell.guru@gmail.com "Email Nate"
+[patrick]: mailto:cwaddell.guru@gmail.com "Email Patrick"
+[rose]: mailto:cwaddell.guru@gmail.com "Email Rosemarie"
