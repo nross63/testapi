@@ -43,19 +43,19 @@ Finish README doc
 
 ##Contributors 
  
-###Christopher Waddell
+####Christopher Waddell
 [cwaddell.guru@gmail.com][chris] 
 
-###Jacob Reusser
+####Jacob Reusser
 [jreusser@logikos.com][jacob]
 
-###Nate Ross
+####Nate Ross
 [nate.ross@alliedpayment.com][nate]
 
-###Patrick Weisz
+####Patrick Weisz
 [patrick.weisz@alliedpayment.com][patrick]
 
-###Rosemarie McClamrock
+####Rosemarie McClamrock
 [mcclr01@students.ipfw.edu][rose]
 
 
