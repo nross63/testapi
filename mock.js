@@ -3,7 +3,7 @@ var restify = require('restify');
 var bunyan = require('bunyan');
 
 //restify services
-var picture = require("./services/picture");
+var photo = require("./services/photo");
 
 //TODO import new services here
 
@@ -25,10 +25,12 @@ var server = restify.createServer({
   name: _name,
   version: _version
 });
+
 log.info('Created Server: ' + _name);
 log.info({
   server: restify
 });
+
 //Plugin is used to parse the HTTP query string (i.e., /picture?id=1).
 //The parsed content will always be available in req.query.
 server.use(restify.queryParser());
@@ -45,12 +47,13 @@ server.get({path: '/'}, function(req , res , next){
 });
 
 //Configure picture routes & handlers
-picture.initialize(_name, _ip, _port);
-var picPATH = '/picture'
-server.get({path: picPATH}, picture.findAll);
-server.get({path: picPATH + '/:id'}, picture.find);
-server.post({path: picPATH}, picture.save);
-server.del({path: picPATH + '/:id'}, picture.remove);
+photo.initialize(_name, _ip, _port,log);
+var picPATH = '/photo'
+//photo service routes
+server.get({path: picPATH}, photo.findAll);
+server.get({path: picPATH + '/:id'}, photo.find);
+server.post({path: picPATH}, photo.save);
+server.del({path: picPATH + '/:id'}, photo.remove);
 
 //TODO add more service routes & handlers
 
