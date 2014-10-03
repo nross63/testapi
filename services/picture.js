@@ -16,9 +16,12 @@ var connection_string = _ip + ":"+_port+"/"+_name;
 var db = mongojs(connection_string, [_name]);
 var pics = db.collection("pictures");
 
-//@param name => type:String =  app name ? "mock"
-//@param ip => type:String =  server ip address ?  "localhost"
-//@param port =>  type:String =  server port ? "8080"
+/*
+*	Initialize the picture RESTful endpoint
+*	@param name => type:String =  app name ? "mock"
+*	@param ip => type:String =  server ip address ?  "localhost"
+*	@param port =>  type:String =  server port ? "8080"
+*/
 function initialize(name, ip, port){
 	if(name !== undefined && name !== null){
 		_name = (name.length > 0) ? name : "mock";
@@ -33,7 +36,12 @@ function initialize(name, ip, port){
 		console.log(_port);
 	}
 };
-//TODO: FINISH DOCUMENTING CODE
+/*
+*	Initialize the picture RESTful endpoint
+*	@param name => type:String =  app name ? "mock"
+*	@param ip => type:String =  server ip address ?  "localhost"
+*	@param port =>  type:String =  server port ? "8080"
+*/
 function findAll(req, res , next){
     res.setHeader('Access-Control-Allow-Origin','*');
     pics.find().limit(20).sort({id : -1} , function(err , success){
@@ -48,7 +56,13 @@ function findAll(req, res , next){
 
     });
 };
- //TODO: FINISH DOCUMENTING CODE
+
+/*
+*	Initialize the picture RESTful endpoint
+*	@param name => type:String =  app name ? "mock"
+*	@param ip => type:String =  server ip address ?  "localhost"
+*	@param port =>  type:String =  server port ? "8080"
+*/
 function find(req, res , next){
     res.setHeader('Access-Control-Allow-Origin','*');
     pics.findOne({_id:mongojs.ObjectId(req.params.id)} , function(err , success){
@@ -61,13 +75,18 @@ function find(req, res , next){
         return next(err);
     })
 };
- //TODO: FINISH DOCUMENTING CODE
+ /*
+*	Initialize the picture RESTful endpoint
+*	@param name => type:String =  app name ? "mock"
+*	@param ip => type:String =  server ip address ?  "localhost"
+*	@param port =>  type:String =  server port ? "8080"
+*/
 function save(req , res , next){
-    var job = {};
-    job.title = req.params.title;
-    job.description = req.params.description;
-    job.location = req.params.location;
-    job.postedOn = new Date();
+    var pics = {};
+    pics.title = req.params.title;
+    pics.description = req.params.description;
+    pics.location = req.params.location;
+    pics.postedOn = new Date();
 
     res.setHeader('Access-Control-Allow-Origin','*');
 
@@ -82,7 +101,12 @@ function save(req , res , next){
         }
     });
 };
- //TODO: FINISH DOCUMENTING CODE
+ /*
+*	Initialize the picture RESTful endpoint
+*	@param name => type:String =  app name ? "mock"
+*	@param ip => type:String =  server ip address ?  "localhost"
+*	@param port =>  type:String =  server port ? "8080"
+*/
 function remove(req , res , next){
     res.setHeader('Access-Control-Allow-Origin','*');
     pics.remove({_id:mongojs.ObjectId(req.params.id)} , function(err , success){
