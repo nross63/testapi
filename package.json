@@ -29,13 +29,8 @@
         "url": "https://bitbucket.org/nross63/mockpicpay/src/97c99bdf0147b571d4a7ede9404bed3dc6a195b8/LICENSE"
     },
     "dependencies": {
-        "gulp": "*",
-        "gulp-watch": "*",
-        "gulp-jshint": "*",
-        "gulp-concat": "*",
-        "gulp-uglify": "*",
         "mongojs": "*",
-        "bunyan": "*",
-        "restify": "*"
+        "restify": "*",
+        "nodemon": "~1.2.1"
     }
 }
