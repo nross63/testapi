@@ -21,7 +21,7 @@ var db = mongojs(connStr, ['photos']);
  *  Query MongoDB for all photos
  *  @param req => request
  *  @param res => response
- *  @param next =>  TODO
+ *  @param next => passes control to the next matching route
  */
 function findAll(req, res, next) {
     res.setHeader('Access-Control-Allow-Origin', '*');
@@ -45,7 +45,7 @@ function findAll(req, res, next) {
  *  Query MongoDB for photo
  *  @param req => request
  *  @param res => response
- *  @param next =>  TODO
+ *  @param next => passes control to the next matching route
  */
 function find(req, res, next) {
     res.setHeader('Access-Control-Allow-Origin', '*');
@@ -66,7 +66,7 @@ function find(req, res, next) {
  *  Create a new photo from request data
  *  @param req => request
  *  @param res => response
- *  @param next =>  TODO
+ *  @param next => passes control to the next matching route
  */
 function save(req, res, next) {
     res.setHeader('Access-Control-Allow-Origin', '*');
@@ -94,7 +94,7 @@ function save(req, res, next) {
  *  Delete a photo from MongoDB
  *  @param req => request
  *  @param res => response
- *  @param next =>  TODO
+ *  @param next => passes control to the next matching route
  */
 function remove(req, res, next) {
     res.setHeader('Access-Control-Allow-Origin', '*');

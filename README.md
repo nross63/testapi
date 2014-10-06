@@ -18,7 +18,7 @@
 #####Navigate to your project directory
 		$ cd ~/.../mockpicpay/
 #####Start restify server
-		$ node mock.js
+		$ node server.js
 
 ######About restify
 	-restify is a node.js module built specifically to enable you to build correct REST web services. 
@@ -33,10 +33,28 @@
 			var myRoute = require('./services/myRoute');
 			//Configure myRoute routes & handlers  
 			var myPATH = '/myRoute';
-			server.get({path : myPATH , version : '0.0.1'} , myRoute.findAll);
-			server.get({path : myPATH +'/:id' , version : '0.0.1'} , myRoute.find);
-			server.post({path : myPATH , version: '0.0.1'} ,myRoute.save);
-			server.del({path : myPATH +'/:id' , version: '0.0.1'} ,myRoute.remove);
+
+			    // GET all resources at path
+			    server.get({
+			        path: myPATH
+			    }, myRoute.findAll);
+
+			    // GET specific photo
+			    server.get({
+			        path: myPATH + '/:id'
+			    }, myRoute.find);
+			    
+
+			    // POST create new photo
+			    server.post({
+			        path: myPATH
+			    }, myRoute.save);
+			    
+
+			    // DELETE remove photo
+			    server.del({
+			        path: myPATH + '/:id'
+			    }, myRoute.remove);
 
 ##Basic GIT tips
 	- List all changes staged & not staged
