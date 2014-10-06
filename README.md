@@ -24,6 +24,9 @@
 	-restify is a node.js module built specifically to enable you to build correct REST web services. 
 [http://mcavage.me/node-restify/][restify]
 
+	-A great tutorial on how to create RESTful API's with node, restify, and MongoDB
+[The Jackal of Javascript][tutorial]
+
 ##How To Contribute
 ###Add RESTful endpoints
 	-Add service endpoints by following the template below.
@@ -103,6 +106,7 @@
 
 [node]: http://nodejs.org/ "Download node.js"
 [restify]: http://mcavage.me/node-restify/ "API Guide | restify"
+[tutorial]: http://thejackalofjavascript.com/nodejs-restify-mongolab-build-rest-api/ "Tutorial"
 [chris]: mailto:cwaddell.guru@gmail.com "Email Chris"
 [jacob]: mailto:jreusser@logikos.com "Email Jacob"
 [nate]: mailto:nate.ross@alliedpayment.com "Email Nate"
