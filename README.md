@@ -56,6 +56,10 @@
 			        path: myPATH + '/:id'
 			    }, myRoute.remove);
 
+##How To Test Contributions
+	- Create a restify client to consume your routes
+		- See tests/photo.js for an working example.
+
 ##Basic GIT tips
 	- List all changes staged & not staged
 		git status
