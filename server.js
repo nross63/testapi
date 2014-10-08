@@ -3,7 +3,7 @@ var restify = require('restify');
 var mongojs = require("mongojs");
 //restify services
 var photos = require("./services/photos");
-
+var payments = require("./services/payments");
 
 
 //TODO import new services here
@@ -41,7 +41,7 @@ server.get({
 
 // PHOTOS
 // =============================================================================
-    var photosPath = '/photos'
+    var photosPath = '/photos';
 
     // GET all photos
     server.get({
@@ -67,11 +67,32 @@ server.get({
 
 
 
-//TODO add more service routes & handlers
+
+// PAYMENTS
 // =============================================================================
 
-
-
+	var paymentsPath = '/payments';
+	
+	// GET all payments
+	server.get({
+		path: paymentsPath
+	}, payments.findAll);
+	
+	// GET a specific payment
+	server.get({
+		path: paymentsPath + '/:id'
+	}, payments.find);
+	
+	// POST create a new payment
+	server.post({
+		path: paymentsPath
+	}, payments.save);
+	
+	// PUT update a specific payment
+	server.put({
+		path: paymentsPath + '/:id'
+	}, payments.change);
+	
 //start server
 server.listen(3000, function() {
     console.log('%s listening at %s', server.name, server.url);
