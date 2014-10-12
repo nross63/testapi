@@ -3,6 +3,7 @@ var restify = require('restify');
 var mongojs = require("mongojs");
 //restify services
 var photos = require("./services/photos");
+var customers = require("./services/customers");
 
 
 
@@ -66,7 +67,60 @@ server.get({
     }, photos.remove);
 
 
+// CUSTOMERS
+// =============================================================================
+    var customersPath = '/customers'
+    // GET all customers
+	server.get({
+        path: customersPath
+    }, customers.findAll);
 
+    // GET specific customer
+    server.get({
+        path: customersPath + '/:id'
+    }, customers.find);
+	    // POST create new customer
+    server.post({
+        path: customersPath + '/create'
+    }, customers.save);
+	// POST create new template
+    server.post({
+        path: customersPath + '/:id'+'/templates'
+    }, customers.saveTemplate);
+	
+	// GET a specific customer's templates
+    server.get({
+        path: customersPath + '/:id'+ '/templates'
+    }, customers.findTemplates);
+	
+	// GET a specific customer's specific template
+    server.get({
+        path: customersPath + '/:id'+ '/templates'+ '/:template'
+    }, customers.findTemplate);
+	
+	//PATCH update a customer
+	server.patch({
+        path: customersPath + '/:id'
+    }, customers.patch);
+	
+	   //PUT update a customer
+	   server.put({
+        path: customersPath + '/:id'
+    }, customers.put);
+		//PUT update a template
+	   server.put({
+        path: customersPath + '/:id'+ '/templates'+ '/:template'
+    }, customers.putTemplate);
+		//PATCH update a template
+	   server.patch({
+        path: customersPath + '/:id'+ '/templates'+ '/:template'
+    }, customers.patchTemplate);
+	
+	//DELETE remove a template
+	   server.del({
+        path: customersPath + '/:id'+ '/templates'+ '/:template'
+    }, customers.removeTemplate);
+	
 //TODO add more service routes & handlers
 // =============================================================================
 
