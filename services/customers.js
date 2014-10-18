@@ -31,7 +31,7 @@ function findAll(req, res, next) {
         }
 
     });
-};
+}
 
 /*
  *  GET /customers/{id}
@@ -52,8 +52,8 @@ function find(req, res, next) {
             return next();
         }
         return next(err);
-    })
-};
+    });
+}
 
 /*
  *  GET /customers/{id}/templates
@@ -100,7 +100,7 @@ function findTemplate(req, res, next){
         }
         return next(err);
     }
-	)
+	);
 }
 
 /*
@@ -113,7 +113,7 @@ function findTemplate(req, res, next){
 function save(req, res, next) {
     res.setHeader('Access-Control-Allow-Origin', '*');
     var customer = req.body;
-    console.log(customer)
+    console.log(customer);
     db.customers.save(customer,
         function(err, data) {
             if (err) {
@@ -130,7 +130,7 @@ function save(req, res, next) {
             res.end(JSON.stringify(data));
         });
     return next();
-};
+}
 
 /*
  *  POST /customers/{id}/templates
@@ -142,7 +142,7 @@ function save(req, res, next) {
 function saveTemplate(req, res, next) {
     res.setHeader('Access-Control-Allow-Origin', '*');
     var template = req.body;
-    console.log(template)
+    console.log(template);
     db.templates.save(template,
         function(err, data) {
             if (err) {
@@ -159,7 +159,7 @@ function saveTemplate(req, res, next) {
             res.end(JSON.stringify(data));
         });
     return next();
-};
+}
 
 /*
  *  PUT /customers/{id}
@@ -180,8 +180,8 @@ function put(req, res, next) {
         for (var n in data) {
             updProd[n] = data[n];
         }
-        for (var n in req.params) {
-            updProd[n] = req.params[n];
+        for (var m in req.params) {
+            updProd[m] = req.params[m];
         }
         db.customers.update({
             id: req.params.id
@@ -195,7 +195,7 @@ function put(req, res, next) {
         });
     });
     return next();
-};
+}
 
 /*
  *  PUT /customers/{id}/templates/{template}
@@ -217,8 +217,8 @@ function putTemplate(req, res, next) {
         for (var n in data) {
             updProd[n] = data[n];
         }
-        for (var n in req.params) {
-            updProd[n] = req.params[n];
+        for (var m in req.params) {
+            updProd[m] = req.params[m];
         }
         db.templates.update({
             customerId: req.params.id,
@@ -233,7 +233,7 @@ function putTemplate(req, res, next) {
         });
     });
     return next();
-};
+}
 
 /*
  *  PATCH /customers/{id}
@@ -254,8 +254,9 @@ function patch(req, res, next) {
         for (var n in data) {
             updProd[n] = data[n];
         }
-        for (var n in req.params) {
-            updProd[n] = req.params[n];
+        //NOTE: reusing variables inside loops can lead to unexpected behavior due to variable hoisting.
+        for (var m in req.params) {
+            updProd[m] = req.params[m];
         }
         db.customers.update({
             id: req.params.id
@@ -269,7 +270,7 @@ function patch(req, res, next) {
         });
     });
     return next();
-};
+}
 
 /*
  *  PATCH /customers/{id}/templates/{template}
@@ -291,8 +292,8 @@ function patchTemplate(req, res, next) {
         for (var n in data) {
             updProd[n] = data[n];
         }
-        for (var n in req.params) {
-            updProd[n] = req.params[n];
+        for (var m in req.params) {
+            updProd[m] = req.params[m];
         }
         db.templates.update({
             customerId: req.params.id,
@@ -307,7 +308,7 @@ function patchTemplate(req, res, next) {
         });
     });
     return next();
-};
+}
 /*
  *  DELETE /customer/{id}/templates/{id}
  *  Delete a customer template from MongoDB
@@ -329,9 +330,9 @@ function removeTemplate(req, res, next) {
         } else {
             return next(err);
         }
-    })
+    });
 
-};
+}
 
 exports.findAll = findAll;
 exports.find = find;

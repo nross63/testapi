@@ -38,7 +38,7 @@ function findAll(req, res, next) {
         }
 
     });
-};
+}
 
 /*
  *  GET /photo?id={id}
@@ -59,8 +59,8 @@ function find(req, res, next) {
             return next();
         }
         return next(err);
-    })
-};
+    });
+}
 /*
  *  POST /photo/
  *  Create a new photo from request data
@@ -71,7 +71,7 @@ function find(req, res, next) {
 function save(req, res, next) {
     res.setHeader('Access-Control-Allow-Origin', '*');
     var photo = req.body;
-    console.log(photo)
+    console.log(photo);
     db.photos.save(photo,
         function(err, data) {
             if (err) {
@@ -88,7 +88,7 @@ function save(req, res, next) {
             res.end(JSON.stringify(data));
         });
     return next();
-};
+}
 /*
  *  DELETE /photo?id={id}
  *  Delete a photo from MongoDB
@@ -109,9 +109,9 @@ function remove(req, res, next) {
         } else {
             return next(err);
         }
-    })
+    });
 
-};
+}
 
 exports.findAll = findAll;
 exports.find = find;
